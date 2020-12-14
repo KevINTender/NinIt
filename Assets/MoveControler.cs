@@ -9,6 +9,14 @@ public class MoveControler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public GameObject playerObj;
     Vector3 startMoveV;
     Vector3 endMoveV;
+    public bool canMove;  
+
+    public void Start()
+    {
+        canMove = false;
+    }
+
+    
     public void OnDrag(PointerEventData eventData)
     {
 
@@ -16,22 +24,28 @@ public class MoveControler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        startMoveV = eventData.pointerCurrentRaycast.worldPosition;
-        Debug.Log("START: " + startMoveV);
-        //Instantiate(pointPrefab, startMoveV, Quaternion.identity);
+        if (canMove)
+        { 
+            startMoveV = eventData.pointerCurrentRaycast.worldPosition;
+            Debug.Log("START: " + startMoveV);
+            //Instantiate(pointPrefab, startMoveV, Quaternion.identity);
+        }
 
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        endMoveV = eventData.pointerCurrentRaycast.worldPosition;
-        Debug.Log("END: " + endMoveV);
-        //Instantiate(pointPrefab, endMoveV, Quaternion.identity);
-        Vector3 moveV = endMoveV - startMoveV;
-        RaycastHit2D hit = Physics2D.Raycast(playerObj.transform.position,  moveV);
-        if (hit.collider != null)
+        if (canMove)
         {
-            Instantiate(pointPrefab, hit.point, Quaternion.identity);
-            playerObj.GetComponent<PlayerControler>().SetGoal(hit.point);
+            endMoveV = eventData.pointerCurrentRaycast.worldPosition;
+            Debug.Log("END: " + endMoveV);
+            //Instantiate(pointPrefab, endMoveV, Quaternion.identity);
+            Vector3 moveV = endMoveV - startMoveV;
+            RaycastHit2D hit = Physics2D.Raycast(playerObj.transform.position, moveV);
+            if (hit.collider != null)
+            {
+                Instantiate(pointPrefab, hit.point, Quaternion.identity);
+                playerObj.GetComponent<PlayerControler>().SetGoal(hit.point);
+            }
         }
     }
 }
