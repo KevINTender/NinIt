@@ -23,17 +23,18 @@ public class StartGame : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void GetEnterPoint()
     {
         enterPoint = touch.transform.position;
-        AB = 1.82f;
+        /*AB = 1.82f;
         BC = enterPoint.y;      
         sinA = BC / AB;
         A = (sinA * 180) / math.PI;
-        Debug.Log(A);
+        Debug.Log(A);*/       
     }
 
     public void GetEndPoint()
     {
         endPoint = touch.transform.position;
         float buff = Vector2.Distance(enterPoint, endPoint);
+        sliceButton.transform.LookAt(endPoint);
     }
 
 
