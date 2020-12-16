@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelControler : MonoBehaviour
 {
@@ -8,8 +9,14 @@ public class LevelControler : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3();
+        
     }
 
+    public void LoadLevel(int id)
+    {
+        SceneManager.LoadScene(1);
+        PlayerPrefs.SetInt("levelid", id);
+    }
     // Update is called once per frame
     void Update()
     {
