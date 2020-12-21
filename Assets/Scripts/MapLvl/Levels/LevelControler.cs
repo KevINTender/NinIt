@@ -14,7 +14,7 @@ public class LevelControler : MonoBehaviour
 
     public void LoadLevel(int id)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         PlayerPrefs.SetInt("levelid", id);
     }
     // Update is called once per frame
