@@ -8,33 +8,10 @@ public class StartGame : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 {
     [SerializeField] GameObject sliceButton;
     [SerializeField] GameObject touch;
-    Vector3 enterPoint;
-    Vector3 endPoint;
-    float AB;
-    float BC;
-    float sinA;
-    float A;
     // Start is called before the first frame update
     void Start()
     {
         
-    }
-
-    public void GetEnterPoint()
-    {
-        enterPoint = touch.transform.position;
-        /*AB = 1.82f;
-        BC = enterPoint.y;      
-        sinA = BC / AB;
-        A = (sinA * 180) / math.PI;
-        Debug.Log(A);*/       
-    }
-
-    public void GetEndPoint()
-    {
-        endPoint = touch.transform.position;
-        float buff = Vector2.Distance(enterPoint, endPoint);
-        sliceButton.transform.LookAt(endPoint);
     }
 
 

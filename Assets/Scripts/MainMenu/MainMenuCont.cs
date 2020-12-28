@@ -5,12 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuCont : MonoBehaviour
 {
-    [SerializeField]
-    private int MapLvlId;
-
-
-    public void LoadMapLvl()
+    public void LoadMapLvl(int _MapLvlId)
     {
-        SceneManager.LoadScene(MapLvlId);
+        SceneManager.LoadScene(_MapLvlId);
     }
 }

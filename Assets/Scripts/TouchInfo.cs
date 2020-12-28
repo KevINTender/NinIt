@@ -14,16 +14,6 @@ public class TouchInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        startGamecs.GetEnterPoint();
-    }
-
-    public void OnTriggerExit2D(Collider2D other)
-    {
-        startGamecs.GetEndPoint();
     }
 }

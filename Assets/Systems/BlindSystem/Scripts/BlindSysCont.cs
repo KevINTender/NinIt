@@ -10,22 +10,25 @@ public class BlindSysCont : MonoBehaviour
     void Start()
     {
         StartOffBlinAnimation();
-        Debug.Log("yes i am");
-    }
-    private void OnLevelWasLoaded(int level)
-    {
-        
     }
 
-    public void LoadScene(int level)
+    public void LoadScene(int _sceneId)
     {
-        SceneManager.LoadScene(level);
+        StartOnBlindAnimation();
+        StartCoroutine(LoadAfterAnim(_sceneId));
     }
-    // Update is called once per frame
+
+    public IEnumerator LoadAfterAnim(int _sceneId)
+    {   
+        yield return new WaitForSeconds(blindAnim.GetClip("BlindOn").length);
+        SceneManager.LoadScene(_sceneId);
+    }
+
     public void StartOnBlindAnimation()
     {
         blindAnim.CrossFade("BlindOn");
     }
+
     void StartOffBlinAnimation()
     {
         blindAnim.CrossFade("BlindOff");
