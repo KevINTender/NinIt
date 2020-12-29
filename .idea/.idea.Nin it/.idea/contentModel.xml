@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Дончуков\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Дончуков\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Nin it.-1969966636.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\Nin it" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="GameControler.cs" t="Include" />
+          <e p="GamePlay" t="Include">
+            <e p="GamePlayCont.cs" t="Include" />
+            <e p="ObstacleSystem" t="Include">
+              <e p="ObstacleControler.cs" t="Include" />
+              <e p="ObstacleInfo.cs" t="Include" />
+            </e>
+          </e>
+          <e p="MainMenu" t="Include">
+            <e p="MainMenuCont.cs" t="Include" />
+          </e>
+          <e p="MapLvl" t="Include">
+            <e p="Levels" t="Include">
+              <e p="LevelConScene.cs" t="Include" />
+              <e p="LevelControler.cs" t="Include" />
+            </e>
+            <e p="MapLvLControler.cs" t="Include" />
+          </e>
+          <e p="MoveControler.cs" t="Include" />
+          <e p="PlayerControler.cs" t="Include" />
+          <e p="StartGame.cs" t="Include" />
+          <e p="TouchInfo.cs" t="Include" />
+        </e>
+        <e p="Systems" t="Include">
+          <e p="BlindSystem" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="BlindSysCont.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Nin it.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
