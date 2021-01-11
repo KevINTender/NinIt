@@ -28,7 +28,11 @@
           <e p="MoveControler.cs" t="Include" />
           <e p="PlayerControler.cs" t="Include" />
           <e p="StartGame.cs" t="Include" />
+          <e p="Test.cs" t="Include" />
           <e p="TouchInfo.cs" t="Include" />
+          <e p="TrailMenu" t="Include">
+            <e p="Scrolling.cs" t="Include" />
+          </e>
         </e>
         <e p="Systems" t="Include">
           <e p="BlindSystem" t="Include">
