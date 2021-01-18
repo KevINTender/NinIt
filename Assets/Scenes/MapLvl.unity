@@ -981,11 +981,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panCount: 7
-  panOffset: 1500
+  panOffset: 1200
   minSpeedSpan: 600
-  snapSpeed: 6
+  snapSpeed: 8
   scaleOffset: 0.1
-  scaleChange: 0.2
+  scaleChange: 0.05
   scaleSpeed: 10
   panPrefab: {fileID: 5831963986581836412, guid: 5909b85a981134649a0ecedffe85d4c0,
     type: 3}
@@ -1080,7 +1080,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 983649517}
   m_PlaneDistance: 100
-  m_PixelPerfect: 1
+  m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
